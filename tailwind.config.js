@@ -17,9 +17,10 @@ module.exports = {
   },
   theme: {
     textColor: {
-      'primary': '#3490dc',
-      'secondary': '#ffed4a',
-      'danger': 'red',
+      'accent': '#5170DB',
+      'primary': '#051B67',
+      'bg':'#FDFDFD',
+      'border':'#F5F5F6',
     },
     fontFamily: {
       'body': ['Avenir', 'Lato', 'sans-serif']

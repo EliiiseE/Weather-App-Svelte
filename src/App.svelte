@@ -1,6 +1,8 @@
 <script>
 	export let name;
 	import Menu from './components/Menu.svelte';
+	import './components/RequestCurrentData';
+
 </script>
 
 <main>
