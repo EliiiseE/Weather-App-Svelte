@@ -1,6 +1,11 @@
 const production = !process.env.ROLLUP_WATCH;
 
 module.exports = {
+  variants: {
+    extend: {
+      animation: ['motion-reduce'],
+    }
+  },
 
   future: {
     purgeLayersByDefault: true,

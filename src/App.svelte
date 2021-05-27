@@ -7,11 +7,11 @@
 </script>
 
 <Router url="{url}">
-	 <div>
-	   <Route path="/city"> <City/> </Route>
-	   <Route path="/"><Home /></Route>
-	 </div>
-   </Router>
+	<div>
+	<Route path="/city"><City/></Route>
+	<Route path="/"><Home/></Route>
+	</div>
+</Router>
 
 
 <style global lang="postcss">
