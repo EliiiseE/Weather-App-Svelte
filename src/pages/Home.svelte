@@ -19,7 +19,7 @@
 </script>
 
 
-<div class="my-8 md:my-16 mx-6">
+<div class="my-8 mx-6 md:my-16">
 	<div class='mb-10 md:mx-14 md:mb-14'>
 		<Header today={'Today, ' + today.getDate() + ' ' + months[today.getMonth()] + ' ' + today.getFullYear()} statement={'Good Morning'}/>
 	</div>	
