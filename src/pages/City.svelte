@@ -3,13 +3,18 @@
 	import CityOverview from '../components/CityOverview.svelte';
 	import Feature from '../components/Feature.svelte';
 	import WeatherByHours from '../components/WeatherByHours.svelte';
+	import GetData from '../components/RequestCurrentData';
+
+	const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'Septembre', 'Octubre', 'Nevember', 'December']
+
+	const today = new Date()
 </script>
 
 <main>
 	<div class="my-16 mx-6 flex flex-row justify-between">
 		<div>
 			<div class='mx-14 mb-14'>
-				<Header today={'Today, 21 May 2021'} statement={'Paris'}/>
+				<Header today={'Today, ' + today.getDate() + ' ' + months[today.getMonth()] + ' ' + today.getFullYear()} statement={'Good Morning'}/>
 			</div>	
 			
 			<div class='mx-14 mb-14'>
