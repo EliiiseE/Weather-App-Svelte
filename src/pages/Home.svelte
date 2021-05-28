@@ -2,20 +2,7 @@
     import GlobalWeather from '../components/GlobalWeather.svelte';
 	import Header from '../components/Header.svelte';
 	import GetData from '../components/RequestCurrentData';
-
-	const cities = [
-		'Paris',
-		'New York',
-		'Londres',
-		'San Francisco',
-		'Tokyo',
-		'Moscow'
-	]
-
-	// Pour récupèrer le mois en fonction de today.getMonths()
-	const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'Septembre', 'Octubre', 'Nevember', 'December']
-
-	const today = new Date()
+	import { months, today, cities } from '../../store';
 </script>
 
 
@@ -29,7 +16,7 @@
 			{#await GetData(city)}
 				<p>...waiting</p>
 			{:then data}
-			<GlobalWeather city={data.name} today={today.getDate() + ' ' + months[today.getMonth()] + ' ' + today.getFullYear()} src={'/images/sun/8.png'} temperature={data.main.temp} />
+			<GlobalWeather city={data.name} today={today.getDate() + ' ' + months[today.getMonth()] + ' ' + today.getFullYear()} src={'/images/sun/8.png'} temperature={data.main.temp.toFixed(0)} />
 			{:catch error}
 				<p>An error occurred!</p>
 			{/await}

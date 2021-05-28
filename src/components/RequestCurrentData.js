@@ -1,4 +1,4 @@
-const API_key =__myapp.env.API_WEATHER_KEY
+import { API_key } from '../../store';
 
 function GetData (CityName) {
     return fetch('https://api.openweathermap.org/data/2.5/weather?q='+CityName+'&appid='+API_key+'&units=metric')
