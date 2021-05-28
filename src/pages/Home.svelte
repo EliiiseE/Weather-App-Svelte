@@ -18,13 +18,13 @@
 	const today = new Date()
 </script>
 
-<main>
-<div class="my-16 mx-6">
-	<div class='mx-14 mb-14'>
+
+<div class="my-8 md:my-16 mx-6">
+	<div class='mb-10 md:mx-14 md:mb-14'>
 		<Header today={'Today, ' + today.getDate() + ' ' + months[today.getMonth()] + ' ' + today.getFullYear()} statement={'Good Morning'}/>
 	</div>	
 
-	<div class="flex flex-wrap mx-8">
+	<div class="flex flex-wrap md:mx-8">
 		{#each cities as city}
 			{#await GetData(city)}
 				<p>...waiting</p>
@@ -36,4 +36,4 @@
 		{/each}
 	</div>
 </div>
-</main>
+
