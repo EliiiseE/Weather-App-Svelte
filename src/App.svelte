@@ -3,7 +3,6 @@
 	import Home from "./pages/Home.svelte";
 	import City from "./pages/City.svelte";
 	export let url = ""; //This property is necessary declare to avoid ignore the Router
-	import './components/RequestCurrentData';
 </script>
 
 <Router url="{url}">

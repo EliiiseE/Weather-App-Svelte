@@ -1,7 +1,7 @@
 <script>
     import GlobalWeather from '../components/GlobalWeather.svelte';
 	import Header from '../components/Header.svelte';
-	import GetData from '../components/RequestCurrentData';
+	import GetCurrentData from '../utils/RequestCurrentData';
 	import { months, today, cities } from '../../store';
 </script>
 
@@ -13,10 +13,10 @@
 
 	<div class="flex flex-wrap md:mx-8">
 		{#each cities as city}
-			{#await GetData(city)}
+			{#await GetCurrentData(city)}
 				<p>...waiting</p>
 			{:then data}
-			<GlobalWeather city={data.name} today={today.getDate() + ' ' + months[today.getMonth()] + ' ' + today.getFullYear()} src={'/images/sun/8.png'} temperature={data.main.temp.toFixed(0)} />
+				<GlobalWeather city={data.name} today={today.getDate() + ' ' + months[today.getMonth()] + ' ' + today.getFullYear()} temperature={data.main.temp.toFixed(0)} data={data} />
 			{:catch error}
 				<p>An error occurred!</p>
 			{/await}

@@ -1,6 +1,6 @@
 import { API_key } from '../../store';
 
-function GetData (CityName) {
+function GetCurrentData (CityName) {
     return fetch('https://api.openweathermap.org/data/2.5/weather?q='+CityName+'&appid='+API_key+'&units=metric')
     .then((resp) => resp.json())
     .then(function(data) {
@@ -11,4 +11,4 @@ function GetData (CityName) {
     })
 }
 
-export default GetData
+export default GetCurrentData
