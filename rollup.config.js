@@ -9,6 +9,7 @@ import { config } from 'dotenv';
 import replace from '@rollup/plugin-replace';
 
 const production = !process.env.ROLLUP_WATCH;
+config();
 
 function serve() {
 	let server;
@@ -62,7 +63,7 @@ export default {
 			__myapp: JSON.stringify({
 			  env: {
 				isProd: production,
-				...config().parsed // attached the .env config
+				API_WEATHER_KEY: process.env.API_WEATHER_KEY
 			  }
 			}),
 		  }),
