@@ -19,6 +19,18 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 export const city = urlParams.get('name');
 
+//Say hello politly to the right time of the day
+const actualHour = today.getHours()
+export let statement 
+
+if (actualHour >= 6 && actualHour < 12) {
+	statement = 'Good Morning'
+} else if (actualHour >=12 && actualHour < 17) {
+	statement = 'Good Afternoon'
+} else if (actualHour >= 17 || actualHour < 6){
+	statement = 'Good Evening'
+}
+
 // Array to convert every id to an image
 export const idToImage = [
 	{

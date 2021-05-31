@@ -2,13 +2,13 @@
     import GlobalWeather from '../components/GlobalWeather.svelte';
 	import Header from '../components/Header.svelte';
 	import GetCurrentData from '../utils/RequestCurrentData';
-	import { months, today, cities } from '../../store';
+	import { months, today, cities, statement } from '../../store';
 </script>
 
 
 <div class="my-8 mx-6 md:my-16">
 	<div class='mb-10 md:mx-14 md:mb-14'>
-		<Header today={'Today, ' + today.getDate() + ' ' + months[today.getMonth()] + ' ' + today.getFullYear()} statement={'Good Morning'}/>
+		<Header today={'Today, ' + today.getDate() + ' ' + months[today.getMonth()] + ' ' + today.getFullYear()} statement={statement}/>
 	</div>	
 
 	<div class="flex flex-wrap md:mx-8">
